@@ -1,0 +1,28 @@
+{% load compress %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" /> -->
+  {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+  {% endcompress %}
+  <title>LISHEBORA</title>
+</head>
+<body class="bg-green-900/75">
+  <div class="container mx-auto mt-4">
+    
+    {% include 'navbar.html' %}
+
+    {% block content %}
+
+    {% endblock content %}
+  </div>
+
+  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+</body>
+</html>
