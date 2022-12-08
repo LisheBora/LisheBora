@@ -13,7 +13,7 @@
   {% endcompress %}
   <title>LISHEBORA</title>
 </head>
-<body class="bg-green-900/75">
+<body class="bg-green-900">
   <div class="container mx-auto mt-4">
     
     {% include 'navbar.html' %}
@@ -21,6 +21,8 @@
     {% block content %}
 
     {% endblock content %}
+
+    {% include 'footer.html' %}
   </div>
 
   <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
